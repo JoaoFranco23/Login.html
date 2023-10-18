@@ -6,21 +6,56 @@
     <title>Trabalhe Conosco</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <from method="get" action="#">
+    <from method="get" action="#"> <!--O atributo será responsavel por definir aonde será enviado os dados cadastrados-->
         <fieldset> <!--Agrupamento que sera utilizado no formulario de cadastro-->
             <div class="Nome"> <!--A div, se caracteriza nos formularios inseridos, dentro do input nome foi -->
                 <span class="material-symbols-outlined">badge</span>
                 <input type="text" name="nome" placeholder="Digite o Primeiro Nome" aria-placeholder="cv-input-text" spellcheck="true" autocomplete="additional-name">
-                <input type="text2" name="sobrenome" placeholder="Digite o Sobrenome" aria-placeholder="cv-input-text" spellcheck="false" aria-autocomplete="">
+                <input type="text2" name="sobrenome" placeholder="Digite o Sobrenome" aria-placeholder="cv-input-text" spellcheck="false" aria-autocomplete="off">
             </div>
             <div class="Email">
                 <span class="material-symbols-outlined">mail</span>
-                <input type="email" spellcheck=""
+                <input type="email" name="email" placeholder="Digite Seu Email" required maxlength="45">
+                <div class="Telephone">
+                    <span class="material-symbols-outlined">call</span>
+                    <label for="DDD"></label>
+                        <input type="area" class="DDD" id="area" placeholder="00" required maxlength="2"></input>
+                        <input type="Tel" id="phone" placeholder="00000-0000" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required maxlength="10" required="" />
+                </div>
+            </div>
+            <div class="Calendario">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <input type="date" autocomplete="off" id="calendar_month" name="data-sitekey" class="cv-input-data validate[required] cv-campo-obrigatorio" size="12" mascara="DD/MM/YYYY" maxlength="12" field="date">
+                <script>
+                    document.getElementById("datapicker").addEventListener("change", function(){
+                        alert("selected date: " + this.values);
+                    })
+                </script>
+                <div class="Genero">
+                    <span class="material-symbols-outlined">wc</span>
+                    <select id="gender" autocomplete="off" name="gander" class="cv-Gennder cv-select validate[required] cv-campo-obrigatorio" field="TIPSEX" required="required">
+                        <option placeholder="Selecione o seu genero" value="">Selecione seu Genero</option>
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option> 
+                    </select>
+                </div>
+                <div class="Estado-Civil">
+                    <select id="matrimonio" autocomplete="off" name="matrimonio" class="cv-mirrage cv-select validate[required] cv-campo-obrigatorio" required="selected">
+                        <option placeholder="selected-marriage" value="">Estado-Civil</option>
+                        <option value="C">Casado</option>
+                        <option value="C">concubinato</option>
+                        <option value="D">Divorciado</option>
+                        <option value="S">Separado</option>
+                        <option value="S">Solteiro</option>
+                        <option value="U">União Estável</option>
+                        <option value="V">Viúvo</option>
+                    </select>                       
+                </div>
             </div>
         </fieldset>
     </from>
