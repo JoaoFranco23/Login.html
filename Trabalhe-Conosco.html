@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 <body>
+    <h1 class="fa-toilet-paper">INFORMAÇÕES PESSOAIS</h1>
     <from method="get" action="#"> <!--O atributo será responsavel por definir aonde será enviado os dados cadastrados-->
-        <fieldset> <!--Agrupamento que sera utilizado no formulario de cadastro-->
-            <div class="Nome"> <!--A div, se caracteriza nos formularios inseridos, dentro do input nome foi -->
+        <fieldset> <!--Margem que sera utilizado no formulario de cadastro-->
+            <div class="Nome">
                 <span class="material-symbols-outlined">badge</span>
                 <input type="text" name="nome" placeholder="Digite o Primeiro Nome" aria-placeholder="cv-input-text" spellcheck="true" autocomplete="additional-name">
                 <input type="text2" name="sobrenome" placeholder="Digite o Sobrenome" aria-placeholder="cv-input-text" spellcheck="false" aria-autocomplete="off">
@@ -25,12 +34,13 @@
                     <span class="material-symbols-outlined">call</span>
                     <label for="DDD"></label>
                         <input type="area" class="DDD" id="area" placeholder="00" required maxlength="2"></input>
-                        <input type="Tel" id="phone" placeholder="00000-0000" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required maxlength="10" required="" />
+                        <input type="Tel" id="phone" placeholder="00000-0000" name="phone-contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required maxlength="10" required="" />
                 </div>
             </div>
             <div class="Calendario">
                 <span class="material-symbols-outlined">calendar_month</span>
                 <input type="date" autocomplete="off" id="calendar_month" name="data-sitekey" class="cv-input-data validate[required] cv-campo-obrigatorio" size="12" mascara="DD/MM/YYYY" maxlength="12" field="date">
+                <input type="idade" id="idade" autocomplete="off" class="cv-input-age validate[required] cv-campo-obrigatorio" placeholder="Digite Sua Idade" field="age"> 
                 <script>
                     document.getElementById("datapicker").addEventListener("change", function(){
                         alert("selected date: " + this.values);
@@ -44,8 +54,14 @@
                         <option value="M">Masculino</option> 
                     </select>
                 </div>
+                <div class="Endeco">
+                    <span class="material-symbols-outlined">home</span>
+                    <input type="text" name="endereco" placeholder="Digite seu Endereço" aria-placeholder="cv-input-text" spellcheck="false" aria-autocomplete="off">
+                    <input type="number" id="number" placeholder="Digite o Numero da Resicencia" spellcheck="true" aria-autocomplete="off">
+                </div>
                 <div class="Estado-Civil">
-                    <select id="matrimonio" autocomplete="off" name="matrimonio" class="cv-mirrage cv-select validate[required] cv-campo-obrigatorio" required="selected">
+                    <span class="material-symbols-outlined">join_inner</span>
+                    <select id="matrimonio" autocomplete="off" name="matrimonio" class="cv-mirrage cv-select validate[required] cv-campo-obrigatorio" required="select">
                         <option placeholder="selected-marriage" value="">Estado-Civil</option>
                         <option value="C">Casado</option>
                         <option value="C">concubinato</option>
@@ -56,6 +72,215 @@
                         <option value="V">Viúvo</option>
                     </select>                       
                 </div>
+            </div>
+            <div class="Estado">
+                <span class="material-symbols-outlined">flag</span>
+                <select class="state" name="state" autocomplete="off" required="cv-select">
+                    <option value="" selected="">Selecione o Estado*</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div class="Cidade">
+                <span class="material-symbols-outlined">location_away</span>
+                <select class="city" name="city" autocomplete="off" required="cv-select">
+                    <option value="" selected="">Selecione a Cidade*</option> 
+                            <option class="Ac" value="Acre">Rio Branco</option> 
+                            <option class="Ac" value="Acre">Cruzeiro do Sul</option>
+                            <option class="Ac" value="Acre">Sena Madureira</option>
+                            <option class="Ac" value="Acre">Taruacá</option>
+                            <option class="Ac" value="Acre">Feijó</option> 
+                            <option class="AL" value="Alagoas">Maceió</option>
+                            <option class="AL" value="Alagoas">Arapiraca</option>
+                            <option class="AL" value="Alagoas">Estrela de Alagoas</option>
+                            <option class="AL" value="Alagoas">Rio Largo</option>
+                            <option class="AL" value="Alagoas">União dos Palmares</option>
+                            <option class="Ap" value="Amapá">Macapá</option>
+                            <option class="Ap" value="Amapá">Santana</option>
+                            <option class="Ap" value="Amapá">Oiapoque</option>
+                            <option class="Ap" value="Amapá">Porto Grande</option>
+                            <option class="Ap" value="Amapá">Vitória do Jari</option>
+                            <option class="AM" value="Amazonas">Manaus</option>
+                            <option class="AM" value="Amazonas">Itacoatira</option>
+                            <option class="AM" value="Amazonas">Manicoré</option>
+                            <option class="AM" value="Amazonas">Humaitá</option>
+                            <option class="AM" value="Amazonas">Autazes</option> 
+                            <option class="BA" value="Bahia">Salvador</option>
+                            <option class="BA" value="Bahia">Feira de Santana</option>
+                            <option class="BA" value="Bahia">Vitória da Conquista</option>
+                            <option class="BA" value="Bahia">Barreiras</option>
+                            <option class="BA" value="Bahia">Porto Seguro</option>
+                            <option class="CE" value="Ceará">Fortaleza</option>
+                            <option class="CE" value="Ceará">Aracati</option>
+                            <option class="CE" value="Ceará">Aracaju</option>
+                            <option class="CE" value="Ceará">Sobral</option>
+                            <option class="CE" value="Ceará">Crato</option>
+                            <option class="DF" value="Distrito Federal">Brasilia</option>
+                            <option class="ES" value="Espirito Santo">Serra</option>
+                            <option class="ES" value="Espirito Santo">Vila Velha</option>
+                            <option class="ES" value="Espirito Santo">Vitória</option>
+                            <option class="ES" value="Espirito Santo">Linhares</option>
+                            <option class="ES" value="Espirito Santo">São Mateus</option>
+                            <option class="GO" value="Goiás">Goiánia</option>
+                            <option class="GO" value="Goiás">Anápolis</option>
+                            <option class="GO" value="Goiás">Rio Verde</option>
+                            <option class="GO" value="Goiás">Água Lindas de Goiás</option>
+                            <option class="GO" value="Goiás">Trindade</option>
+                            <option class="MA" value="Maranhão">Caxias</option>
+                            <option class="MA" value="Maranhão">Imperatriz</option>
+                            <option class="MA" value="Maranhão">Açailândia</option>
+                            <option class="MA" value="Maranhão">Timon</option>
+                            <option class="MA" value="Maranhão">Codó</option>
+                            <option class="MT" value="Mato Grosso">Diamantino</option>
+                            <option class="MT" value="Mato Grosso">Comodoro</option>
+                            <option class="MT" value="Mato Grosso">Vila Rica</option>
+                            <option class="MT" value="Mato Grosso">Campo Novo do Norte</option>
+                            <option class="MT" value="Mato Grosso">Juara</option><option value="MS">Mato Grosso do Sul</option>
+                            <option class="MG" value="Minas Gerais">Belo Horizonte</option>
+                            <option class="MG" value="Minas Gerais">Uberlândia</option>
+                            <option class="MG" value="Minas Gerais">Ipatinga</option>
+                            <option class="MG" value="Minas Gerais">Sete Lagoas</option>
+                            <option class="MG" value="Minas Gerais">Paraguaçu</option>
+                            <option class="PA" value="Pará">Belém</option>
+                            <option class="PA" value="Pará">Santarém</option>
+                            <option class="PA" value="Pará">Marabá</option>
+                            <option class="PA" value="Pará">Castanhal</option>
+                            <option class="PA" value="Pará">Ananindeua</option>
+                            <option class="PB" value="Paraíba">Aparecida</option>
+                            <option class="PB" value="Paraíba">Amparo</option>
+                            <option class="PB" value="Paraíba">Bananeiras</option>
+                            <option class="PB" value="Paraíba">Barra de São Miguel</option>
+                            <option class="PB" value="Paraíba">Barra de Santana</option>
+                            <option class="PR" value="Paraná">Curitiba</option>
+                            <option class="PR" value="Paraná">Londrina</option>
+                            <option class="PR" value="Paraná">Maringa</option>
+                            <option class="PR" value="Paraná">Ponta Grossa</option>
+                            <option class="PR" value="Paraná">São José dos Pinhais</option>
+                            <option class="PE" value="Pernambuco">Recife</option>
+                            <option class="PE" value="Pernambuco">Olinda</option>
+                            <option class="PE" value="Pernambuco">Petrolina</option>
+                            <option class="PE" value="Pernambuco">Petrolina</option>
+                            <option class="PE" value="Pernambuco">Camaragibe</option>
+                            <option class="PI" value="Piauí">Parnaiba</option>
+                            <option class="PI" value="Piauí">Picos</option>
+                            <option class="PI" value="Piauí">Floriano</option>
+                            <option class="PI" value="Piauí">Barras</option>
+                            <option class="PI" value="Piauí">União</option>
+                            <option class="RJ" value="Rio de Janeiro">Angra dos Reis</option>
+                            <option class="RJ" value="Rio de Janeiro">Arraial do Cabo</option>
+                            <option class="RJ" value="Rio de Janeiro">Barra Mansa</option>
+                            <option class="RJ" value="Rio de Janeiro">Bom Jesus do Itabapoana</option>
+                            <option class="RJ" value="Rio de Janeiro">Cabo Frio</option>
+                            <option class="RN" value="Rio Grande do Norte">Natal</option>
+                            <option class="RN" value="Rio Grande do Norte">Parnamirim</option>
+                            <option class="RN" value="Rio Grande do Norte">Natal</option>
+                            <option class="RN" value="Rio Grande do Norte">Ceará Mirim</option>
+                            <option class="RN" value="Rio Grande do Norte">Assu</option>
+                            <option class="RS" value="Rio Grande do Sul">Porto Alegre</option>
+                            <option class="RS" value="Rio Grande do Sul">Caxias do Sul</option>
+                            <option class="RS" value="Rio Grande do Sul">Santa Maria</option>
+                            <option class="RS" value="Rio Grande do Sul">Novo Hamburgo</option>
+                            <option class="RS" value="Rio Grande do Sul">Canoas</option>
+                            <option class="RO" value="Rondônia">Porto Velho</option>
+                            <option class="RO" value="Rondônia">Guajará Mirim</option>
+                            <option class="RO" value="Rondônia">Vilhena</option>
+                            <option class="RO" value="Rondônia">São Francisco do Guaporé</option>
+                            <option class="RO" value="Rondônia">Pimenta Bueno</option>
+                            <option class="RR" value="Roraima">Boa Vista</option>
+                            <option class="RR" value="Roraima">Rorainópolis</option>
+                            <option class="RR" value="Roraima">Alto Alegre</option>
+                            <option class="RR" value="Roraima">Mucajai</option>
+                            <option class="RR" value="Roraima">Pacaraima</option>
+                            <option class="SC" value="Santa Catarina">Alto Bela Vista</option>
+                            <option class="SC" value="Santa Catarina">Água Doce</option>
+                            <option class="SC" value="Santa Catarina">Arvoredo</option>
+                            <option class="SC" value="Santa Catarina">Águas de Chapecó</option>
+                            <option class="SC" value="Santa Catarina">Anchieta</option>
+                            <option class="SP" value="São Paulo">São Paulo</option>
+                            <option class="SP" value="São Paulo">Adamantina</option>
+                            <option class="SP" value="São Paulo">SÃO BERNARDO DO CAMPO</option>
+                            <option class="SP" value="São Paulo">RIBEIRÃO PRETO</option>
+                            <option class="SP" value="São Paulo">SÃO JOSÉ DOS CAMPOS</option>
+                            <option class="SE" value="Sergipe">Amparo de São Francisco</option>
+                            <option class="SE" value="Sergipe">Aquidabã</option>
+                            <option class="SE" value="Sergipe">Aracaju</option>
+                            <option class="SE" value="Sergipe">Areia Branca</option>
+                            <option class="SE" value="Sergipe">Barra dos Coqueiros</option>
+                            <option class="TO" value="Tocantins">PALMAS</option>
+                            <option class="TO" value="Tocantins">ARAGUAÍNA</option>
+                            <option class="TO" value="Tocantins">ARAGUATINS</option>
+                            <option class="TO" value="Tocantins">GURUPI</option>
+                            <option class="TO" value="Tocantins">GUARAÍ</option>
+                </select> 
+            </div>
+        </fieldset>
+        <h2 class="fa-toilet-paper">Documentação</h2>
+        <fieldset>
+            <form name="document">
+                <span class="material-symbols-outlined">clinical_notes</span>
+                <input type="cnh" id="cv-campo-cnh" name="cnh" class="cv-campo-cnh validate[required] cv-campo-obrigatorio" size="11" placeholder="Nº de Registro cnh" maxlength="11"> 
+                <input type="document" id="number-document" name="rg" placeholder="Nº RG" spellcheck="true" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o RG no formato: xx.xxx.xxx.x">
+                <input type="document" id="number-cpf" name="cpf" placeholder="Nº CPF" spellcheck="true" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato: xxx.xxx.xxx-xx">
+            </form>
+        </fieldset>
+        <h3 class="fa-toilet-paper">Formação Academica</h3>
+        <fieldset>
+            <div class="escolaridade">
+                <span class="material-symbols-outlined">school</span>
+                <select id="escolaridade" name="escolaridade" class="validate[required]">
+                    <option value="" selected="select">Formação Academica</option>
+                    <option value="1º grau Completo">1º grau Completo</option>
+                    <option value="1º grau Incompleto">1º grau Incompleto</option>
+                    <option value="2º grau Completo">2º grau Completo</option>
+                    <option value="2º grau Incompleto">2º grau Incompleto</option>
+                    <option value="Superior Completo">Superior Completo</option>
+                    <option value="Superior Incompleto">Superior Incompleto</option>
+                </select>
+            </div>
+        </fieldset>
+        <h4 class="fa-toilet-paper">Cursos Extra Curriculares</h4>
+        <fieldset>
+            <div class="text-area">
+                <input type="text-area" name="objetivo" required maxlength="2000" placeholder="Quais são seus objetivos dentro da empresa">
+            </div>
+        </fieldset>
+        <h5 class="fa-toilet-paper">Objetivo</h5>
+        <fieldset>
+            <div class="text-area">
+                <!--<textarea class="" name="objetivo" aria-setsize="2000" placeholder="Quais são seus objetivos dentro da empresa"></textarea>-->
+                <input type="text-area" name="objetivo" required maxlength="2000" placeholder="Quais são seus objetivos dentro da empresa">
+            </div>
+        </fieldset>
+        <h6 class="fa-toilet-paper">Experiencia</h6>
+        <fieldset>
+            <div class="work">
+                <span class="material-symbols-outlined">business_center</span>
+                
             </div>
         </fieldset>
     </from>
