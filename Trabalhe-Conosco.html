@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 <body>
@@ -272,7 +273,6 @@
         <h5 class="fa-toilet-paper">Objetivo</h5>
         <fieldset>
             <div class="text-area">
-                <!--<textarea class="" name="objetivo" aria-setsize="2000" placeholder="Quais são seus objetivos dentro da empresa"></textarea>-->
                 <input type="text-area" name="objetivo" required maxlength="2000" placeholder="Quais são seus objetivos dentro da empresa">
             </div>
         </fieldset>
@@ -280,8 +280,31 @@
         <fieldset>
             <div class="work">
                 <span class="material-symbols-outlined">business_center</span>
-                
+                <input class="cv-input-text validate[required] cv-campo-obrigatorio" type="text-arera" name="trabalhou" placeholder="Nome da empresa que trabalhou">
             </div>
+            <div class="bi-phone">
+                <span class="material-symbols-outlined">call</span>
+                <input type="Tel" id="phone" placeholder="(00)00000-0000" name="phone-contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required maxlength="12" required="" />
+            </div>
+            <script>
+                function alertText(){
+                    document.getElementById('bi-phone');
+                    alert("Telefone da empresa que Trabalha(ou)");
+                }
+            </script>
+            <div class="city-item">
+                <span class="material-symbols-outlined">location_city</span>
+                <input class="cv-input-city validate[required] cv-campo-obrigatorio" type="text" id="city-location" placeholder="Cidade">
+                <input class="cv-input-city validate[required] cv-campo-obrigatorio" type="text" placeholder="Estado">
+            </div>
+            <div class="fagroup">
+                    <span class="material-symbols-outlined">date_range</span>
+                    <label data-="-webkit-calendar-picker-indicator"></label>
+                    <input type="date" autocomplete="off" id="calendar_month" name="data-sitekey" class="cv-input-data validate[required] cv-campo-obrigatorio" size="12" mascara="DD/MM/YYYY" maxlength="12" field="date">
+                    <input for="card-text" type="text" autocomplete="off" id="text_day" name="cargo" class="cv-input-text validate[required] cv-campo-obrigatorio" placeholder="Cargo Inicial"></input> 
+                    <input type="val-number" autocomplete="off" character="R$" id="val-number" class="val-number validate[required] cv-campo-obrigatorio" placeholder="Salario Inicial">
+            </div>
+            
         </fieldset>
     </from>
 </body>
