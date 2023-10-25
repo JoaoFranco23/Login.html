@@ -297,14 +297,27 @@
                 <input class="cv-input-city validate[required] cv-campo-obrigatorio" type="text" id="city-location" placeholder="Cidade">
                 <input class="cv-input-city validate[required] cv-campo-obrigatorio" type="text" placeholder="Estado">
             </div>
-            <div class="fagroup">
+            <div class="experiencia">
                     <span class="material-symbols-outlined">date_range</span>
                     <label data-="-webkit-calendar-picker-indicator"></label>
                     <input type="date" autocomplete="off" id="calendar_month" name="data-sitekey" class="cv-input-data validate[required] cv-campo-obrigatorio" size="12" mascara="DD/MM/YYYY" maxlength="12" field="date">
-                    <input for="card-text" type="text" autocomplete="off" id="text_day" name="cargo" class="cv-input-text validate[required] cv-campo-obrigatorio" placeholder="Cargo Inicial"></input> 
-                    <input type="val-number" autocomplete="off" character="R$" id="val-number" class="val-number validate[required] cv-campo-obrigatorio" placeholder="Salario Inicial">
+                    <input for="card-text" type="text" autocomplete="off" id="text_day" name="cargo" class="cv-input-text validate[required] cv-campo-obrigatorio" placeholder="Cargo"></input> 
+                    <input type="val-number" autocomplete="off" character="R$" id="val-number" class="val-number validate[required] cv-campo-obrigatorio" placeholder="Salario"> 
             </div>
-            
+            <div class="text-area">
+                <input type="text-card" autocomplete="off" id=" text_card" name="function" class="cv-input-text validate[required] cv-campo-obrigatorio" placeholder="Funçao Exercida" rows="20px">
+            </div>
+        </fieldset>
+        <h7 class="fa-toilet-pape">Curriculo Pronto</h7>
+        <fieldset>
+            <div class="bi-file"> <!--Atributo é responssavel por selecionar arquivos, sendo pdf ou Documentos-->
+                <input type="file" accept="PDF/document" oncleck="open('preenchimento'), close('envio_anexo'); open('btn_enviar')" value="cv-select">
+                <label for="form-Control-File">Enviar Anexo</label>
+            </div>
+        </fieldset>
+        <h8 class="fa-toilet-paper">Apresentação</h8>
+        <fieldset> <!--Atributo responsavel por anexar video-->
+            <input type="file" id="videoInput" name="videoInput" accept=".mp4.video/webm">
         </fieldset>
     </from>
 </body>
